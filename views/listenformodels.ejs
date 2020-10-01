@@ -1,0 +1,51 @@
+<style>
+  button
+  {
+    width: 80vw;
+    background-color: #009EE2;
+    margin: 1vh;
+  	color: white;
+  	border: none;
+  	cursor: pointer;
+  	border: 0;
+  	font-size: 16px;
+  	display: inline-block;
+  	/* 2dp — Elevation */
+  	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
+  }
+</style>
+
+ <!-- <script src="https://code.jquery.com/jquery-1.1.1.js" integrity="sha256-6/6tEG91KdLJdvYQDRIjcmzsB4N/QQ92AmlTtBnSCUQ=" crossorigin="anonymous"></script> -->
+
+<section class="figmabluebox">
+  <article>
+    <h3>Voice Command Management Library</h3>
+  </article>
+  <article>
+    <form id="listenformodelsform" action="?" method="post">
+      <p>Welcome to the voice assistant page. Please click the "Start Service button below."</p>
+      <button>Start Service</button>
+    </form>
+
+
+    <article>
+    <ul id="messages">
+      <li>Note: Proof of Concept Version</li>
+      <li>Text from Raspberry Pi, is displayed below whenever Snowboy recognizes your voice command:</li>
+      <li></li>
+    </ul>
+    </article>
+    <br>
+  </article>
+</section>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+      $(function () {
+        var socket = io();
+        socket.on('log_message', function(msg){
+         $('#messages').append($('<li>').text(msg));
+        });
+      });
+</script>

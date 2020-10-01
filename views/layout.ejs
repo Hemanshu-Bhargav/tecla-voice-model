@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tecla WebApp</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Bootstrap JS, Popper.js, and jQuery (regular jquery, used in socket.io as well) for dropdown -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Font-awesome icons. MINE HAVE BEEN REMOVED. Please add your own embed code, otherwise uncomment Google Material Design Icons below -->
+<script src="https://use.fontawesome.com/297a7216f8.js"></script>
+<!--
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<!-- Google Material Design Icons (accessed through HTML rather than locally linked SVGs for each icon) -->
+<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+
+<!-- Ensure external stylesheets are below framework stylesheets (Bootstrap), in order to override-->
+<link rel="stylesheet" href="style.css" />
+
+<!-- AJAX CDN -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+  integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+  crossorigin="anonymous"
+></script>
+
+<!-- jquery for socket.io modelcreation.ejs -->
+<script src="https://code.jquery.com/jquery-1.1.1.js" integrity="sha256-6/6tEG91KdLJdvYQDRIjcmzsB4N/QQ92AmlTtBnSCUQ="
+   crossorigin="anonymous"></script>
+<!-- IMPORTANT: DO NOT MOVE main.js and socket.io references. THEY MUST BE IN BODY AFTER DOM HAS LOADED. Otherwise js will load first and won't find the HTML tags -->
+<header></header>
+<body>
+  <section class="headerbluebox">
+    <img src="teclaicononly1.png" alt="">
+    <img src="teclatextlogoonly1.png" alt="">
+  </section>
+<!--  <section class="headerbluebox" style="position: relative;"> -->
+        <ul style="position: sticky; top: 0; z-index: 1;">
+          <li style="float:left; padding-left: 2.5vw; padding-top: 1vh;"><h1>Tecla Voice Assistant</h1></li>
+          <li class="nav-item dropdown" style= "float: left;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" style= "padding-top: 3vh;" data-toggle="dropdown" ></a>
+            <div style="margin-left: 5vw;" class="dropdown-menu">
+              <a class="dropdown-item" href="/landingpage">Home</a>
+              <a class="dropdown-item" href="/actionselection">Action Selection</a>
+              <a class="dropdown-item" href="/listenformodels">Voice Command Service</a>
+            </div>
+          </li>
+        </ul>
+<!-- </section> -->
+<!-- move overlapping figmabluebox over. Figmabluebox should overlap navbar dropdown but also be aligned with other content. -->
+<section class="figmabluebox" style="height: 8vh; margin-left: 0.25vw; top: 0; position: sticky;">
+
+</section>
+  <section class="container" >
+      <%- body %>
+    </section>
+</body>
+<footer></footer>
+</html>

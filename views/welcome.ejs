@@ -1,0 +1,96 @@
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+      $(window).keydown(function(event){
+        if(event.keyCode == 13) {
+          event.preventDefault(); //Prevent form submission on press Enter for keyboard users
+          return false;
+        }
+      });
+    });
+</script>
+  <!-- Python Command-line arugments -->
+  <form action="/submitform" method="POST">
+
+      <section class="figmabluebox">
+        <h2>Register an Action</h2>
+        <h5>To create a voice command, Tecla needs you to answer the following questions:</h5>
+        <p>What do you want to name your voice command?</p>
+        <p>Tecla Voice Assistant will end a phone call everytime you speak either one of the options below, or when you speak the command you type in the text box below.</p>
+        <input type="radio" id="endcall" name="endcall">
+        <label for="endcall">End Phone Call</label><br>
+        <input type="radio" id="hangup" name="hangup">
+        <label for="hangup">Hang Up</label><br>
+        <input type="radio" id="disconnectcall" name="disconnectcall">
+        <label for="disconnectcall">Disconnect Call</label><br>
+
+        <article>
+          <!-- Google Material Design Text Icon. Icon name is between brackets. Referenced from layout.ejs -->
+        <!--  <i class="material-icons">text_fields</i> -->
+          <label for="hotword">Alternatively, please type in the phrase you would like Tecla to respond to:</label><br>
+        </article>
+        <input style="margin-top:0.50; margin-bottom: 0.5vw; margin-right: 0vw; margin-left: 0vw; padding: 0.25vw; width: 95.5vw;"
+          type="text"
+          id="hotword"
+          name="hotword"
+          class="form-control"
+          placeholder="Custom Voice Command (Two Word Phrase Recommended)"
+        </input>
+      </section>
+
+      <!-- Age -->
+      <section class="figmabluebox">
+        <article>
+          How old are you?
+        </article>
+        <br>
+        <input type="radio" id="age" name="age" value="20-29">
+        <label for="language">20-29</label><br>
+        <input type="radio" id="age" name="age" value="30-39">
+        <label for="language">30-39</label><br>
+        <input type="radio" id="age" name="age" value="40-49">
+        <label for="language">40-49</label><br>
+        <input type="radio" id="age" name="age" value="50-59">
+        <label for="language">50-59</label><br>
+        <input type="radio" id="age" name="age" value="60-69">
+        <label for="language">60-69</label>
+      </section>
+
+      <!-- Language -->
+      <section class="figmabluebox">
+
+        <article>
+          <!-- Google Material Design Code icon. -->
+    <!--      <i class="material-icons">language/i> -->
+          Which language will your voice command be in?
+        </article>
+        <br>
+        <input type="radio" id="language" name="language" value="en">
+        <label for="language">English</label>
+      </section>
+
+      <!-- "Voice Type" (stand-in for gender) Should be a radio button -->
+      <section class="figmabluebox">
+
+        <article>
+          <!-- Google Material Design Code icon -->
+  <!--        <i class="material-icons">surround_sound</i> -->
+          Voice Type
+        </article>
+        <br>
+        <input type="radio" id="voicetype" name="voicetype" value="F">
+        <label for="voicetype">I speak softly</label><br>
+        <input type="radio" id="voicetype" name="voicetype" value="F">
+        <label for="voicetype">I'm somewhere in between</label><br>
+        <input type="radio" id="voicetype" name="voicetype" value="M">
+        <label for="voicetype">I speak loudly</label><br>
+
+      </section>
+
+      <button onclick="func()" type="submit" class="btn btn-primary btn-block">Save My Voice Command</button>
+
+  </form>
+  <!-- new button test -->
+  <script>
+    const func = () => fetch('http://localhost:3000'); //connect to this page
+  </script>

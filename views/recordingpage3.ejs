@@ -1,0 +1,39 @@
+<section class="figmabluebox">
+  <article>
+
+    <p style="padding:1vh;">Tecla Voice Assistant requires three sample voice recordings of your voice command. </p>
+    <p style="padding:1vh;">To record the first of three voice commands, please choose the number of seconds you need to record your voice command, and click "Record my sample" below, once the page refreshes, your microphone will begin recording, and the progress bar will show how much time you have left. If you make a mistake, click the button again or refresh the page.</p>
+
+    <!-- Modify original record1.py, so that all recording processes take '# of seconds'
+    as a command-line argument -->
+
+    <form id="configuremicrophone" action="?" method="post">
+      <select class="reqaddseconds" name="reqaddseconds">
+        <option value="3">I need 3 seconds to record my voice command</option>
+        <option value="5" selected="selected">I need 5 seconds to record my voice command</option>
+        <option value="7">I need 7 seconds to record my voice command</option>
+        <option value="10">I need 10 seconds to record my voice command</option>
+      </select>
+      <button onclick="reloadP()" class="micbutton">Record my sample</button>
+
+
+      <div id="app" style="margin-left: 35%; margin-right: 50%;"></div>
+
+      <div id="rechotword1"></div>
+        <!-- add in EJS tags:  // JSON.stringify(msgalert) --> <!-- <p>Test if p tag works in forms</p> -->
+    </form>
+
+    <!-- Navigate to next page (to record sample# 3/3) . Retain 1 figmabluebox only -->
+  <form class="navigatemodelcreation" style="margin-top: 2vh; margin-bottom: 2vh;" action="modelcreation">
+    <button>Next</button>
+  </form>
+
+  </article>
+</section>
+
+<link rel="stylesheet" href="recordingstyle.css" />
+<script src="recordingclient.js"></script>
+
+<!-- Record Button implemented as empty form. Page refresh is disables using event.preventDefault below -->
+<!-- Add "Recording Successful!" to page reload. Empty form submission no longer prevents page refresh (note: didn't use jQuery), but rather
+causes refresh as this is necessary to trigger server-side functions. Therefore, button click causes recording to initiate, and on reload progress bar activates (not on first load)  -->

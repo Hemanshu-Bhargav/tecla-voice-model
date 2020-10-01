@@ -1,0 +1,37 @@
+<style>
+  button
+  {
+    width: 90vw;
+    background-color: #009EE2;
+    margin: 1vh;
+  	color: white;
+  	border: none;
+  	cursor: pointer;
+  	border: 0;
+  	font-size: 16px;
+  	display: inline-block;
+  	/* 2dp — Elevation */
+  	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
+  }
+</style>
+
+<section class="figmabluebox">
+  <article>
+    <h3>Voice Command Submitted!</h3>
+    <!-- REMOVED JSON.stringify(storedhotword.hotword) -->
+    <p>Thank you for submitting your voice command information.</p>
+    <p>For your voice command to be registered, Tecla Voice Assistant requires three voice samples. </p>
+    <p>To record a voice sample, simply speak the voice command below:</p>
+    <h5><%- JSON.stringify(storedhotword.hotword)%></h5><br>
+  </article>
+</section>
+
+<section class="figmabluebox">
+  <article>
+    <p>If you make a mistake, use the navigation bar at the top of this page to return to a previous step.</p>
+    <p>Now, please proceed to the recording page:</p>
+    <form class="navigaterecordingpage1" action="/recordingpage1" method="get">
+      <button>Recording Page</button>
+    </form>
+  </article>
+</section>

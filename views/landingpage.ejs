@@ -1,0 +1,124 @@
+<style>
+  /* Move inline repeated styles to this style sheet (or link another one) for actionselection.ejs */
+  .figmabluebox:hover
+  {
+    padding-top: 0.5vw; padding-bottom: 0.5vw; margin-right: 1vw;  line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle; float: left;
+    background-color: grey;
+  }
+</style>
+
+<!-- Voice Activity Detection (VAD) setup must happen prior to Voice Command configuration -->
+<section class="figmabluebox">
+  <form class="" action="/vad" method="get">
+    <button type="submit" class="landingbutton"> <!--  name="initialsetup Removed name because need GET request for /actionselection -->
+      <article class="landingarticle">
+        <!-- Google Material Design icon -->
+        <i class="material-icons md-36">settings_input_component</i>
+        <h3 style=" padding-top: 0.5vw; padding-bottom: 0.5vw; margin-right: 1vw;  line-height: 1.5;
+        display: inline-block;
+        vertical-align: middle; float: left;">Preliminary Setup</h3>
+      </article>
+    </button>
+  </form>
+</section>
+
+
+<!-- Initial setup. heading is styled to ensure text is centered vertically. style.css takes care of icon styling, CDN links on layouts.ejs -->
+<!-- For now only initial setup has form enabled -->
+<section class="figmabluebox">
+  <form class="" action="/actionselection" method="get">
+    <button type="submit" class="landingbutton"> <!--  name="initialsetup Removed name because need GET request for /actionselection -->
+      <article class="landingarticle">
+        <!-- Google Material Design Code icon -->
+        <i class="material-icons-two-tone md-36" style="font-size: 32px;">library_add</i>
+        <h3 style=" padding-top: 0.5vw; padding-bottom: 0.5vw; margin-right: 1vw;  line-height: 1.5;
+        display: inline-block;
+        vertical-align: middle; float: left;">Add Voice Command</h3>
+      </article>
+    </button>
+  </form>
+</section>
+
+<!-- Text Input or Phrase Selection -->
+<section class="figmabluebox">
+  <button type="button" class="landingbutton" name="voicecommand">
+    <article class="landingarticle">
+      <!-- Google Material Design Code icon -->
+      <i class="material-icons md-36">text_fields</i>
+      <h3 style=" padding-top: 0.5vw; padding-bottom: 0.5vw; margin-right: 1vw;  line-height: 1.5;
+      display: inline-block;
+      vertical-align: middle; float: left;">Voice Command Name</h3>
+    </article>
+    </button>
+</section>
+
+<!-- Age -->
+<section class="figmabluebox">
+  <button type="button" class="landingbutton" name="language">
+    <article class="landingarticle">
+      <!-- Google Material Design Code icon -->
+      <i class="material-icons-two-tone md-36" style="font-size: 32px;">language</i>
+      <h3 style=" padding-top: 0.5vw; padding-bottom: 0.5vw; margin-right: 1vw;  line-height: 1.5;
+      display: inline-block;
+      vertical-align: middle; float: left;">Language</h3>
+    </article>
+    </button>
+</section>
+
+<!-- Language -->
+<section class="figmabluebox">
+  <button type="button" class="landingbutton" name="age">
+    <article class="landingarticle">
+      <!-- Google Material Design Code icon. Person used to depict age -->
+    <!--  <i class="fas fa-child icon-4x"></i> -->
+      <i class="material-icons-two-tone md-36" style="font-size: 32px;">person</i>
+      <h3 style=" padding-top: 0.5vw; padding-bottom: 0.5vw; margin-right: 1vw;  line-height: 1.5;
+      display: inline-block;
+      vertical-align: middle; float: left;">Age</h3>
+    </article>
+  </button>
+</section>
+
+<!-- "Voice Type" (stand-in for gender) Should be a radio button -->
+<section class="figmabluebox">
+  <button type="button" class="landingbutton" name="voicetype">
+    <article class="landingarticle">
+      <!-- Google Material Design Code icon for face used in place of age. -->
+      <i class="material-icons-two-tone md-36" style="font-size: 32px;">surround_sound</i>
+      <h3 style=" padding-top: 0.5vw; padding-bottom: 0.5vw; margin-right: 1vw;  line-height: 1.5;
+      display: inline-block;
+      vertical-align: middle; float: left;">Voice Type</h3>
+    </article>
+  </button>
+</section>
+
+<!-- Gain should be a radio button -->
+<section class="figmabluebox">
+  <form class="" action="/microphone" method="get">
+    <button type="submit" class="landingbutton" name="microphonevolume">
+      <article class="landingarticle">
+        <!-- Google Material Design Code icon for face used in place of age. -->
+        <i class="material-icons-two-tone md-36" style="font-size: 32px;">mic</i>
+        <h3 style=" padding-top: 0.5vw; padding-bottom: 0.5vw; margin-right: 1vw;  line-height: 1.5;
+        display: inline-block;
+        vertical-align: middle; float: left;">Microphone Setup</h3>
+      </article>
+    </button>
+    </form>
+</section>
+
+<section class="figmabluebox">
+  <form class="" action="/listenformodels" method="get">
+    <button type="submit" class="landingbutton"> <!--  name="initialsetup Removed name because need GET request for /actionselection -->
+      <article class="landingarticle">
+        <!-- Google Material Design Code icon -->
+        <i class="material-icons-two-tone md-36" style="font-size: 32px;">folder</i>
+        <h3 style=" padding-top: 0.5vw; padding-bottom: 0.5vw; margin-right: 1vw;  line-height: 1.5;
+        display: inline-block;
+        vertical-align: middle; float: left;">Voice Command Library</h3>
+      </article>
+    </button>
+  </form>
+</section>

@@ -1,0 +1,273 @@
+html {
+ height: 100vh;
+ width: 100vh;
+}
+
+header
+{
+  background-color: #28B0EA;
+  height: 2vh;
+  width: 97.5vw;
+  margin: 0 0.25vw; /* container (body) and headerbluebox (logo and app name) have 0.25vw margins */
+}
+
+footer
+{
+  background-color: rgba(0, 0, 0, 0.78);
+  height: 2vh;
+  width: 97.5vw;
+  margin: 0 0.25vw; /* container (body) and headerbluebox (logo and app name) have 0.25vw margins */
+  bottom: 0px; /* helps push to bottom */
+  position: sticky; /* sticky for end of content or fixed for end of page (along with bottom: 0px;). Fixed causes problems. */
+}
+
+@media screen and (min-width: 440px)
+{
+  .container
+  {
+    width: 98.5vw;
+  /*  margin-left: 1vw;
+    margin-right: 1vw; */
+    margin-left: 0.25vw;
+    margin-right: 0.25vw;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .navbardrop
+  {
+    width: 2vw; height: 2vh; margin-left: 2.5vw; padding-top: 2.5vh;
+  }
+
+  .figmabluebox
+  {
+    width: 97.5vw;
+
+  }
+
+  section
+  {
+      width: 98.5vw;
+      padding-left: 0.5vw;
+  }
+
+  article
+  {
+    width: 98.5vw;
+  }
+
+  .headerbluebox
+  {
+    width: 97.5vw;
+    margin-left: 0.25vw;
+    margin-right: 0.25vw;
+  }
+  .tecladropdown
+  {
+    z-index: 0;
+  }
+  #overlap
+  {
+    height: 8vh; margin-left: 0.25vw; top: 0; position: sticky;
+  }
+}
+
+@media screen and (min-width: 140px)
+{
+
+  body
+  {
+      font-size: 0.75em;
+  }
+
+  h1 { font-size: 2.75em;}
+
+  /* adjusted 75%
+  h1 { font-size: 1.5em; }
+  h2 { font-size: 1.125em; }
+  h3 { font-size: 0.875em; }
+  h4 { font-size: 0.84em; }
+  h5 { font-size: .625em; }
+  h6 { font-size: .56em; }
+*/
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 0.75em;
+}
+#overlap
+{
+  height: 2vh; margin-left: 0.25vw; top: 0; position: sticky;
+}
+  li a
+  {
+    height: 2vh;
+    width: 10vw;
+  }
+  #navbardrop
+  {
+    width: 1vw; height: 1vh; margin-left: 1.5vw; padding-top: 1.5vh;
+  }
+  .voiceheader
+  {
+    float:left; padding-left: 2.5vw;
+  }
+  .tecladropdown
+  {
+    z-index: 0;
+    position: sticky;
+    top: 0;
+  }
+
+  .container
+    {
+      width: 98.5vw;
+    /*  margin-left: 1vw;
+      margin-right: 1vw; */
+      margin-left: 0.25vw;
+      margin-right: 0.25vw;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .figmabluebox
+    {
+      width: 97.5vw;
+
+    }
+
+    section
+    {
+        width: 98.5vw;
+        padding-left: 0.5vw;
+    }
+
+    article
+    {
+      width: 98.5vw;
+    }
+
+    .headerbluebox
+    {
+      width: 97.5vw;
+      margin-left: 0.25vw;
+      margin-right: 0.25vw;
+    }
+}
+
+i {
+  float: left;
+  padding: 1vw;
+}
+
+.reqaddseconds
+{
+  width: 95vw;
+  padding: 1vh;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  margin-left: 0vw;
+  margin-right: 1vw;
+  /* Chrome Only. Doesn't center options, need jQuery plugin for that but mobile ui takes over anyway */
+  text-align-last:center;
+}
+.button.myfigmabutton{
+/* Was in figma but REMOVED	position: absolute; */
+	background-color: #009EE2;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border: 0;
+	font-size: 16px;
+	display: inline-block;
+	/* 2dp — Elevation */
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
+}
+.button.myfigmabuttonrecord{
+/* Was in figma but REMOVED	position: absolute; */
+	background-color: #009EE2;
+  margin: 1vh;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border: 0;
+	font-size: 16px;
+	display: inline-block;
+	/* 2dp — Elevation */
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.14);
+}
+
+.btn-primary{
+  width: 97.5vw;
+  padding: inherit;
+  margin: inherit;
+}
+.figmabluebox{
+/*	padding: 1% 5%; */
+	background: #FFFFFF;
+	border: 1px solid #009EE2;
+	box-sizing: border-box;
+}
+.headerbluebox{
+		background: #FFFFFF;
+		border: 1px solid #009EE2;
+		box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 97vw;
+  height: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  width: 97vw;
+  height: 10vh;
+	top: max-device;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #009EE2;
+  color: white;
+  margin-right: 1.5vw;
+}
+
+li a:hover:not(.active) {
+  background-color: grey;
+  color: white;
+}
+
+/* Rules for sizing the Google material icons, changed font-size to "override" class. */
+.material-icons.md-36 { font-size: 32px; }
+.material-icons.two-tone { font-size: 32px; }
+
+.landingarticle
+{
+  width: 97vw;
+}
+
+.landingbutton
+{
+  background: transparent;
+  border: none !important;
+  /*margin-left: 0.5vw; */
+  padding: 0;
+  font-size:0;
+  margin: 0;
+}
+
+#myProgress {
+  width: 90vw;
+  background-color: #ddd;
+}
+#myBar {
+  width: 1vw;
+  height: 30px;
+  padding: 1.5vh;
+  background-color: #009EE2;
+}
+/* Note: For future, use CSS grid or place-items: center; display: grid; */
